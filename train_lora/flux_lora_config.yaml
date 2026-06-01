@@ -1,0 +1,86 @@
+# ============================================================
+#  Flux LoRA Training Config - ai-toolkit by ostris
+#  Docs: https://github.com/ostris/ai-toolkit
+# ============================================================
+#
+#  HƯỚNG DẪN:
+#  1. Sửa các giá trị có comment "← SỬA"
+#  2. Chạy: python ../ai-toolkit/run.py flux_lora_config.yaml
+# ============================================================
+
+job: extension
+config:
+  name: "flux_character_lora"    # ← SỬA: tên LoRA output (sẽ lưu vào output_lora/)
+  process:
+    - type: sd_trainer
+      training_folder: "./output_lora"   # Folder lưu LoRA kết quả
+
+      # --- Device ---
+      device: cuda:1
+      # Nếu dùng GPU đầu tiên: cuda:0
+
+      # --- Trigger word (PHẢI khớp với prepare_dataset.py) ---
+      trigger_word: "ohwx cat"          # ← SỬA: trigger word của nhân vật
+
+      # --- Network (LoRA) ---
+      network:
+        type: "lora"
+        linear: 16          # rank: 4=nhẹ, 16=cân bằng, 32=nặng
+        linear_alpha: 16    # thường = rank
+
+      # --- Save settings ---
+      save:
+        dtype: float16
+        save_every: 500       # Lưu checkpoint mỗi N steps
+        max_step_saves_to_keep: 4
+
+      # --- Dataset ---
+      datasets:
+        - folder_path: "./dataset"    # ← SỬA: path đến dataset (từ prepare_dataset.py)
+          caption_ext: "txt"
+          caption_dropout_rate: 0.05  # 5% drop caption → tránh overfitting
+          shuffle_tokens: false
+          cache_latents_to_disk: true  # Cache để tăng tốc training
+          resolution: [512, 768, 1024] # Multi-resolution
+
+      # --- Training ---
+      train:
+        batch_size: 1
+        steps: 3000           # ← SỬA: 1000-2000 cho 20 ảnh, 3000-5000 cho 50 ảnh
+        gradient_accumulation_steps: 1
+        train_unet: true
+        train_text_encoder: false   # Không train text encoder với Flux
+        content_or_style: "balanced"  # "content"=giữ nhân vật, "style"=giữ style
+        learning_rate: 1.0e-4
+        optimizer: "adamw8bit"    # adamw8bit tiết kiệm VRAM
+        lr_scheduler: "cosine"
+        lr_warmup_steps: 100
+        ema_config:
+          use_ema: true
+          ema_decay: 0.99
+        dtype: bf16               # bf16 cho RTX 3000+/4000+/5000+
+
+      # --- Model ---
+      model:
+        name_or_path: "E:/repos/ComfyUI/models/diffusion_models/FLUX1/flux1-dev.safetensors"
+        # ↑ SỬA: Path đến flux1-dev.safetensors (cần tải nếu chỉ có GGUF)
+        is_flux: true
+        quantize: true           # Quantize model trong training để tiết kiệm VRAM
+        # quantize_te: true      # Bỏ comment nếu muốn quantize text encoder
+
+      # --- Sampling (preview ảnh trong lúc train) ---
+      sample:
+        sampler: "flowmatch"
+        sample_every: 500        # Preview mỗi N steps
+        width: 512
+        height: 512
+        prompts:
+          # ← SỬA: thêm trigger word vào đầu mỗi prompt
+          - "ohwx cat sitting in a cozy room, comic book style"
+          - "ohwx cat running in a park, cartoon style"
+          - "ohwx cat sleeping peacefully"
+        neg: ""                  # Flux không dùng negative prompt hiệu quả
+        seed: 42
+        walk_seed: true          # Seed tăng dần mỗi lần sample
+        guidance_scale: 4
+        sample_steps: 20
