@@ -105,9 +105,13 @@ def prepare_dataset(
 
         # Tạo caption
         out_txt = dataset_path / f"img_{idx:04d}.txt"
+        src_txt = img_path.with_suffix(".txt")
         if out_txt.exists():
             # Giữ caption đã có
             pass
+        elif src_txt.exists():
+            # Giữ caption đã tạo sẵn cạnh ảnh gốc (vd: caption_training_images.py)
+            out_txt.write_text(src_txt.read_text(encoding="utf-8"), encoding="utf-8")
         elif auto_caption and processor is not None:
             caption = generate_caption(img_out, processor, blip_model, trigger_word)
             out_txt.write_text(caption, encoding="utf-8")

@@ -24,3 +24,10 @@ web_custom_versions/
 filtered-openapi.yaml
 uv.lock
 .comfy_environment
+
+# LoRA training (ai-toolkit) — vendored clone + generated datasets/outputs/logs
+/train_lora/ai-toolkit/
+/train_lora/dataset/
+/train_lora/output_lora/
+training_log.txt
+optimizer.pt

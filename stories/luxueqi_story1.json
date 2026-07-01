@@ -1,0 +1,308 @@
+{
+  "story": { 
+    "title": "Chương 1: Mưa Đêm Linh Tuyền Các", 
+    "author": "", 
+    "output_subdir": "stories/tru_tien" 
+  },
+  "model": { 
+    "checkpoint": "miaomiao_mature_edition_eps1.1.safetensors", 
+    "lora": "luxueqi_lora.safetensors", 
+    "lora_strength": 0.85, 
+    "trigger": "luxueqi" 
+  },
+  "style": {
+    "character_tags": "silver hair, blue eyes, white and blue hanfu, xianxia style",
+    "quality_tags": "masterpiece, best quality, highly detailed, cinematic lighting",
+    "negative": "lowres, bad anatomy, bad hands, worst quality, low quality, jpeg artifacts, text, watermark, signature, extra limbs, deformed fingers"
+  },
+  "generation": { 
+    "aspect": "auto", 
+    "steps": 28, 
+    "cfg": 7.0, 
+    "sampler": "euler_ancestral", 
+    "scheduler": "normal", 
+    "base_seed": 42 
+  },
+  "scenes": [
+    { 
+      "id": 1, 
+      "narrative": "Mưa rơi nặng hạt trên mái ngói Linh Tuyền Các, tiếng nước chảy róc rách hòa cùng tiếng gió thoảng qua khe đá. Tuyết Kỳ đứng giữa sân, tay nắm chặt chuôi kiếm bạc, ánh mắt xanh lạnh nhìn về hướng núi Thanh Vân xa mờ.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, wide shot, luxueqi (female) standing center left, silver hair wet, blue eyes focused ahead, white and blue hanfu clinging to slender waist, hand gripping sword hilt, spiritual mist swirling around stone base", 
+      "seed": 42 
+    },
+    { 
+      "id": 2, 
+      "narrative": "Vạt áo lụa trắng-xanh ướt đẫm dính sát eo thon, hơi lạnh thấm vào da thịt nhưng khí huyết trong người vẫn vận chuyển đều đặn theo công pháp Thanh Tâm.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, full body shot, luxueqi (female) standing on platform, silver hair dampened, white and blue hanfu soaked clinging to torso and hips, flowing sleeves dripping water, cool blue ambient light mixed with warm glow", 
+      "seed": 43 
+    },
+    { 
+      "id": 3, 
+      "narrative": "Gió mạnh lướt qua, mái tóc bạc dài tung bay che khuất một phần gương mặt thanh tú, đôi mắt xanh ánh lên vẻ tập trung cao độ.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot, luxueqi (female) standing still, long silver hair blowing across face, blue eyes sharp and focused, hanfu collar slightly askew from wind, fabric rippling dynamically", 
+      "seed": 44 
+    },
+    { 
+      "id": 4, 
+      "narrative": "Giọt mưa đọng trên má trái cô trượt dài xuống cằm, biểu cảm bình thản nhưng lồng ngực phập phồng nhẹ theo nhịp thở điều hòa.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait, luxueqi (female) facing forward, raindrop sliding down cheek, calm expression, subtle chest movement with steady breathing, shallow depth of field", 
+      "seed": 45 
+    },
+    { 
+      "id": 5, 
+      "narrative": "Bầu trời đêm u ám bỗng chốc xé toạc bởi tia sét xa, ánh sáng chập chờn chiếu rọi con đường mòn dẫn vào sân viện.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, wide shot, distant lightning flash illuminating mountain path, wet stone steps glistening, night sky with scattered clouds, dramatic contrast lighting", 
+      "seed": 46 
+    },
+    { 
+      "id": 6, 
+      "narrative": "Bóng người cao lớn bước ra từ màn mưa, chân dung nam tu sĩ mặc áo bào đen thêu vân bạc hiện rõ dưới ánh đèn lồng mờ ảo.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, full body shot two-shot, luxueqi (female) standing left watching, silver hair wet, white and blue hanfu clinging to slender waist, tall male cultivator (male) stepping right onto platform, black robe with silver cloud patterns soaked from rain, broad shoulders, hand resting on sword hilt, dynamic walking pose toward her", 
+      "seed": 47 
+    },
+    { 
+      "id": 7, 
+      "narrative": "Anh ta dừng lại trước sân, tay buông kiếm, ánh mắt trầm tĩnh quét qua không gian ẩm ướt và bóng dáng cô gái đứng đó.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) standing still left, silver hair dampened, white and blue hanfu clinging to torso, tall male cultivator (male) stopping right, black robe draped over broad shoulders, calm gaze directed forward, rain dripping from wet dark hair, atmospheric fog", 
+      "seed": 48 
+    },
+    { 
+      "id": 8, 
+      "narrative": "Giọt nước trượt dài trên sống mũi anh ta, gương mặt tuấn tú mang vẻ phong trần của người đã trải qua nhiều kiếp tu luyện.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait, tall male cultivator (male), water droplet on nose bridge, handsome weathered face, wet dark hair plastered to forehead, sharp jawline, black robe collar visible, soft focus background", 
+      "seed": 49 
+    },
+    { 
+      "id": 9, 
+      "narrative": "Tuyết Kỳ khẽ cúi đầu chào, vạt áo lụa trượt nhẹ khỏi vai trái để lộ làn da trắng ngần dưới ánh đèn vàng.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) slight bowing posture left, hanfu slipping off left shoulder revealing pale collarbone, tall male cultivator (male) standing right watching, black robe dry now, calm expression, warm lantern glow casting shadows", 
+      "seed": 50 
+    },
+    { 
+      "id": 10, 
+      "narrative": "“Đêm mưa lạnh, xin phép nhập nội.” Giọng nói trầm khàn vang lên, anh ta bước vào trong sân viện và ngồi đối diện cô trên chiếu trúc.", 
+      "dialogue": "Đêm mưa lạnh, xin phép nhập nội.", 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, full body shot two-shot, luxueqi (female) sitting left on bamboo mat, hands forming mudra on lap, tall male cultivator (male) sitting right opposite, black robe with silver cloud patterns dry now, legs crossed calmly, dialogue bubble: \"Đêm mưa lạnh, xin phép nhập nội.\"", 
+      "seed": 51 
+    },
+    { 
+      "id": 11, 
+      "narrative": "Tuyết Kỳ nhắm mắt vận công, hai bàn tay bắt ấn quyết trên đùi, khí linh xanh nhạt tỏa ra từ lòng bàn chân.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) hands forming mudra on lap left, faint blue spiritual energy glowing around fingers, closed eyes serene expression, tall male cultivator (male) sitting right breathing steadily, golden aura faintly visible", 
+      "seed": 52 
+    },
+    { 
+      "id": 12, 
+      "narrative": "Nam tu sĩ cũng bắt đầu điều hòa khí tức, luồng vàng óng nhẹ nhàng lan tỏa từ ngực anh ta hòa vào không gian ẩm thấp.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, golden spiritual energy emanating from chest of tall male cultivator (male) right, black robe slightly open at collar revealing muscular male torso, hands resting on knees, cross-lighting between luxueqi (female) left and him, rhythmic breathing visible", 
+      "seed": 53 
+    },
+    { 
+      "id": 13, 
+      "narrative": "Hai luồng khí gặp nhau giữa không trung, tạo thành vòng xoáy ánh sáng nhỏ, nhiệt độ trong phòng dần tăng lên.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, wide shot two-shot, swirling blue and gold energy threads meeting in center between luxueqi (female) left and tall male cultivator (male) right, wooden floor reflecting light, steam rising from bamboo mat, dynamic motion blur", 
+      "seed": 54 
+    },
+    { 
+      "id": 14, 
+      "narrative": "Tuyết Kỳ khẽ nhíu mày, hơi thở bắt đầu gấp gáp hơn khi linh lực nghịch hành chạy dọc sống lưng.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) furrowed brows left, lips slightly parted, sweat forming on forehead, intense focus in blue eyes, chest rising rapidly with heavy breathing, tall male cultivator (male) right leaning forward watching closely", 
+      "seed": 55 
+    },
+    { 
+      "id": 15, 
+      "narrative": "Anh ta đưa tay phải ra, ngón tay dài chạm nhẹ vào cổ tay cô, truyền một luồng nhiệt ấm áp ngược lên kinh mạch.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up upper body two-shot, tall male cultivator (male) right hand touching luxueqi (female) left wrist, skin-to-skin contact, spiritual warmth visualized as soft glow, fabric sleeves pushed back, fingers interlacing", 
+      "seed": 56 
+    },
+    { 
+      "id": 16, 
+      "narrative": "“Khí huyết nghịch hành… giúp ta điều hòa.” Giọng anh ta trầm xuống, ngón tay cái khẽ xoa nhẹ lên mu bàn tay cô.", 
+      "dialogue": "Khí huyết nghịch hành… giúp ta điều hòa.", 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, tall male cultivator (male) thumb rubbing back of luxueqi (female) hand right, hanfu sleeves slipping further down arms left, flushed cheeks, heavy breathing harmonizing, dialogue bubble: \"Khí huyết nghịch hành… giúp ta điều hòa.\"", 
+      "seed": 57 
+    },
+    { 
+      "id": 17, 
+      "narrative": "Tuyết Kỳ khẽ rên nhẹ, đầu ngón tay cô run rẩy khép lại bao lấy cổ tay anh ta, hơi thở hòa theo nhịp đập của nhau.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) fingers intertwining with tall male cultivator (male) hand left, trembling knuckles, heavy breathing visible in air, soft focus background, intimate proximity, mouth slightly parted gasping sound: \"Ừm…\"", 
+      "seed": 58 
+    },
+    { 
+      "id": 18, 
+      "narrative": "Áo bào đen của anh ta hơi xộc xệch khi anh ta nghiêng người về phía trước, khoảng cách giữa hai người thu hẹp lại.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, tall male cultivator (male) leaning in posture right, black robe shifting on broad shoulders, collarbone exposed, fabric wrinkles from movement, dynamic angle, chest rising rapidly, luxueqi (female) left watching closely", 
+      "seed": 59 
+    },
+    { 
+      "id": 19, 
+      "narrative": "Mùi hương trầm ấm quyện với hơi mưa lan tỏa, Tuyết Kỳ ngước lên nhìn anh ta qua hàng mi ướt đẫm.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) looking up through wet lashes left, blue eyes reflecting lantern light, lips slightly parted, soft bokeh background, breath fog visible in cool air, tall male cultivator (male) right leaning closer", 
+      "seed": 60 
+    },
+    { 
+      "id": 20, 
+      "narrative": "“Ừm… nhẹ tay chút…” Cô khẽ rên khi anh ta dùng ngón trỏ kéo vạt áo lụa lệch hẳn khỏi vai phải.", 
+      "dialogue": "Ừm… nhẹ tay chút…", 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) hanfu unbuttoned at chest revealing pale skin left, mouth slightly parted gasping sound: \"Ừm… nhẹ tay chút…\", tall male cultivator (male) right fingers gripping fabric edge pulling silk sash loose, slight arch in back", 
+      "seed": 61 
+    },
+    { 
+      "id": 21, 
+      "narrative": "Nam tu sĩ cúi xuống, môi chạm nhẹ vào cổ cô, hơi thở nóng hổi phả lên làn da đang dần ửng hồng.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close proximity shot two-shot, tall male cultivator (male) lips touching luxueqi (female) collarbone right, flushed skin tone left, sweat on neck, fabric slightly parted at chest, soft focus background, rhythmic hip shift visible", 
+      "seed": 62 
+    },
+    { 
+      "id": 22, 
+      "narrative": "Tuyết Kỳ vòng tay qua cổ anh ta, ngón tay luồn vào mái tóc ướt, kéo nhẹ xuống gần hơn.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) arms wrapped around tall male cultivator (male) neck left, fingers in wet dark hair right, leaning in closely, dynamic pose, breath mingling, black robe slipping off shoulders", 
+      "seed": 63 
+    },
+    { 
+      "id": 23, 
+      "narrative": "Môi anh ta chạm môi cô, nụ hôn đầu tiên chậm rãi nhưng đầy tham vọng, lưỡi lướt nhẹ qua kẽ răng.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) and tall male cultivator (male) lips meeting center, tongues intertwining slightly, eyes half-closed, heavy breathing, soft blur background, intimate atmosphere, chest rising rapidly", 
+      "seed": 64 
+    },
+    { 
+      "id": 24, 
+      "narrative": "Áo lụa trắng-xanh bị đẩy lên khỏi eo, để lộ vòng eo thon gọn và làn da trắng muốt dưới ánh đèn vàng.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) hanfu lifted off waist revealing slender torso and navel left, fabric bunched at chest, sweat on skin, tall male cultivator (male) right leaning over hands gripping hips", 
+      "seed": 65 
+    },
+    { 
+      "id": 25, 
+      "narrative": "Anh ta dùng tay trái nâng cằm cô lên, tay phải trượt xuống lưng dưới, kéo sát cơ thể vào nhau.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, tall male cultivator (male) left hand under luxueqi (female) chin right, other hand on lower back pulling close, bodies pressed together, dynamic tension in posture, soft shadows, rhythmic breathing syncing", 
+      "seed": 66 
+    },
+    { 
+      "id": 26, 
+      "narrative": "“Đừng dừng…” Tuyết Kỳ thì thầm khi anh ta bắt đầu hôn sâu hơn, môi run rẩy theo nhịp thở gấp.", 
+      "dialogue": "Đừng dừng…", 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) lips moving in kiss left, trembling mouth, eyes closed tight, sweat on temples, shallow depth of field, chest heaving with heavy breaths, dialogue bubble: \"Đừng dừng…\"", 
+      "seed": 67 
+    },
+    { 
+      "id": 27, 
+      "narrative": "Vạt áo lụa bị xé nhẹ ở đường may, để lộ vai trái hoàn toàn, làn da trắng sáng phản chiếu ánh lửa.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) torn hanfu seam revealing shoulder and collarbone left, pale skin glowing, fabric hanging loosely, tall male cultivator (male) right beside her hands sliding down back", 
+      "seed": 68 
+    },
+    { 
+      "id": 28, 
+      "narrative": "Nam tu sĩ cúi xuống hôn lên ngực cô, răng khẽ cắn nhẹ vào đầu vú bên phải khiến Tuyết Kỳ rên khe khẽ.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up shot two-shot, tall male cultivator (male) lips on luxueqi (female) chest right, teeth lightly biting nipple left, head thrown back slightly, flushed skin, rapid breathing visible, hanfu slipped to waist", 
+      "seed": 69 
+    },
+    { 
+      "id": 29, 
+      "narrative": "Cô vòng tay ôm chặt lấy lưng anh ta, ngón tay bám vào vải áo bào đen, kéo mạnh xuống.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, luxueqi (female) hands gripping tall male cultivator (male) black robe fabric left, pulling down, dynamic pose, sweat on collarbone, chest rising rapidly", 
+      "seed": 70 
+    },
+    { 
+      "id": 30, 
+      "narrative": "Áo bào đen tuột khỏi vai anh ta, để lộ ngực cơ bắp săn chắc, hơi thở nóng hổi hòa vào không gian ẩm thấp.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, tall male cultivator (male) black robe sliding off shoulders exposing muscular chest and abs right, wet dark hair falling forward, skin glistening with sweat, cinematic lighting, heavy breathing", 
+      "seed": 71 
+    },
+    { 
+      "id": 31, 
+      "narrative": "Hai người di chuyển sang chiếu trúc rộng, Tuyết Kỳ nằm ngửa, chân anh ta kẹp giữa đùi cô.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, full body shot two-shot, luxueqi (female) lying on back left, silver hair spread, white and blue hanfu pushed to waist exposing bare torso, tall male cultivator (male) straddling right, black robe slipping off shoulders revealing muscular chest, legs intertwined, hips beginning rhythmic movement", 
+      "seed": 72 
+    },
+    { 
+      "id": 32, 
+      "narrative": "“Nhanh hơn… nữa…” Cô rên lên khi anh ta bắt đầu chuyển động nhịp nhàng, hông xoay đều đặn.", 
+      "dialogue": "Nhanh hơn… nữa…", 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, hips moving rhythmically center, luxueqi (female) hands gripping sheets left, flushed cheeks, heavy breathing visible in air, soft blur background, tall male cultivator (male) right leaning forward, dialogue bubble: \"Nhanh hơn… nữa…\"", 
+      "seed": 73 
+    },
+    { 
+      "id": 33, 
+      "narrative": "Mái tóc bạc dài tung bay trên chiếu trúc, từng lọn tóc dính mồ hôi bám vào má và cổ.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) wet silver hair spread on mat left, sweat on cheek and neck, eyes half-closed misty, lips parted gasping sound: \"Hưm…\", tall male cultivator (male) right leaning over hands gripping her waist", 
+      "seed": 74 
+    },
+    { 
+      "id": 34, 
+      "narrative": "Anh ta cúi xuống hôn cổ cô, tay trái luồn vào tóc, tay phải bám chặt vào eo thon kéo lên.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, tall male cultivator (male) left hand in luxueqi (female) hair right, other hand on waist pulling up, leaning over, dynamic pose, fabric slightly parted at chest, rhythmic motion lines", 
+      "seed": 75 
+    },
+    { 
+      "id": 35, 
+      "narrative": "“Đau mà thích…” Tuyết Kỳ rên khẽ khi nhịp độ tăng dần, lưng cong nhẹ lên theo chuyển động.", 
+      "dialogue": "Đau mà thích…", 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) arched back posture left, trembling shoulders, eyes closed tight, sweat on forehead, shallow depth of field, sound effect: \"Đau mà thích…\", tall male cultivator (male) right hands gripping her hips tightly", 
+      "seed": 76 
+    },
+    { 
+      "id": 36, 
+      "narrative": "Hông anh ta xoay nhanh hơn, tiếng lụa xé nhẹ hòa cùng tiếng thở gấp gáp vang lên trong phòng.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, fast hip movement center, fabric tearing sound visualized by motion lines, hands gripping sheets tightly, dynamic angle, chest heaving with heavy breaths, sweat glistening on skin", 
+      "seed": 77 
+    },
+    { 
+      "id": 37, 
+      "narrative": "Tuyết Kỳ đưa tay lên che miệng, mắt mờ ảo, môi run rẩy khi cảm giác lên đỉnh dồn dập kéo đến.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, close-up portrait two-shot, luxueqi (female) hand over mouth left, misty eyes, trembling lips, full body tension visible, tall male cultivator (male) beside right, rapid breathing peaking, sound effect: \"Ahh…\"", 
+      "seed": 78 
+    },
+    { 
+      "id": 38, 
+      "narrative": "Cơ thể cô run rẩy toàn thân, ngón tay co duỗi giấu vào gối, hơi thở ngắt quãng rồi thả lỏng hẳn.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, full body shot two-shot, luxueqi (female) trembling body left, fingers curling into mat, legs relaxed, afterglow expression, soft focus background, sheets tangled around thighs, tall male cultivator (male) right resting forehead against hers", 
+      "seed": 79 
+    },
+    { 
+      "id": 39, 
+      "narrative": "Anh ta cúi xuống hôn lên trán cô, hơi thở chậm lại, hai người nằm sát nhau dưới ánh đèn mờ.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, upper body shot two-shot, tall male cultivator (male) leaning over forehead kiss right, intertwined limbs center, hanfu and robe disheveled around waist left, synchronized slow breathing, warm amber lighting", 
+      "seed": 80 
+    },
+    { 
+      "id": 40, 
+      "narrative": "Mưa tạnh dần, tia sáng ban mai len qua khe cửa, chiếu rọi lên gương mặt bình yên của hai người tu luyện.", 
+      "dialogue": null, 
+      "prompt": "ancient wooden pavilion interior, bamboo mat floor, open sides showing rainy mountain path, warm lantern lighting, wide shot two-shot, morning light through pavilion door center, soft blur background, disheveled silk sheets left and right, peaceful expressions, cinematic dawn lighting, both resting on bamboo mat", 
+      "seed": 81 
+    }
+  ]
+}

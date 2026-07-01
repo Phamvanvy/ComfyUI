@@ -1,0 +1,16 @@
+{
+"story": { "title": "IPAdapter consistency test", "author": "", "output_subdir": "stories/_iptest" },
+"model": { "checkpoint": "miaomiao_mature_edition_eps1.1.safetensors", "lora": "luxueqi_lora.safetensors", "lora_strength": 0.9, "trigger": "luxueqi" },
+"style": {
+"character_tags": "1girl, solo, silver hair, long hair, blue eyes, white and blue hanfu, xianxia style",
+"quality_tags": "masterpiece, best quality, highly detailed, cinematic lighting",
+"scene_suffix": "detailed scenic background, consistent character design, consistent anime art style, soft cinematic color grading",
+"negative": "lowres, bad anatomy, bad hands, worst quality, low quality, jpeg artifacts, text, watermark, signature"
+},
+"generation": { "width": 1344, "height": 768, "steps": 30, "cfg": 6.0, "sampler": "dpmpp_2m", "scheduler": "karras", "base_seed": 777, "lock_seed": true },
+"scenes": [
+{ "id": 1, "narrative": "Cận cảnh gương mặt nàng, mỉm cười dịu dàng.", "prompt": "close-up portrait, gentle smile, soft sunlight, bamboo forest background", "seed": 101 },
+{ "id": 2, "narrative": "Toàn thân nàng đứng giữa vườn tiên.", "prompt": "full body, standing, celestial garden, flowers, waterfall background, elegant pose", "seed": 102 },
+{ "id": 3, "narrative": "Nàng vung kiếm, khí thế bừng bừng.", "prompt": "cowboy shot, swinging sword, dynamic action pose, glowing blue sword, mountain cliff background, dramatic", "seed": 103 }
+]
+}

@@ -1,0 +1,92 @@
+# ============================================================
+#  SDXL / Illustrious LoRA Training Config - ai-toolkit
+#  Dung cho: miaomiao_mature_edition (SDXL base)
+#  Docs: https://github.com/ostris/ai-toolkit
+# ============================================================
+#
+#  BUOC CHUAN BI:
+#  1. Chay caption:
+#     cd E:\repos\ComfyUI
+#     python caption_training_images.py ^
+#       --input_dir output\lora_training_data\luxueqi_1024 ^
+#       --trigger_word luxueqi
+#
+#  2. Chay prepare_dataset:
+#     cd E:\repos\ComfyUI\train_lora
+#     python prepare_dataset.py ^
+#       --input_dir ..\output\lora_training_data\luxueqi_1024 ^
+#       --trigger_word "luxueqi" ^
+#       --image_size 1024 ^
+#       --repeats 15
+#
+#  3. Chay training: train_sdxl.bat
+# ============================================================
+
+job: extension
+config:
+  name: "luxueqi_lora"          # ← Ten file .safetensors output
+  process:
+    - type: sd_trainer
+      training_folder: "./output_lora"
+
+      device: cuda:0             # RTX 5060 Ti - chi co 1 GPU nen dung cuda:0
+
+      trigger_word: "luxueqi"    # ← Doi thanh trigger word cua nhan vat
+
+      # --- LoRA Network ---
+      network:
+        type: "lora"
+        linear: 16               # rank: 8=nhe/nhanh, 16=can bang, 32=chi tiet
+        linear_alpha: 16         # thuong = rank
+
+      # --- Save ---
+      save:
+        dtype: float16
+        save_every: 500
+        max_step_saves_to_keep: 4
+
+      # --- Dataset ---
+      datasets:
+        - folder_path: "./dataset"   # prepare_dataset.py se tao subfolder o day
+          caption_ext: "txt"
+          caption_dropout_rate: 0.05
+          shuffle_tokens: false
+          cache_latents_to_disk: true
+          resolution: [1024]
+
+      # --- Training ---
+      train:
+        batch_size: 1
+        steps: 3000              # 75 anh x15 repeats = 1125 buoc/epoch → ~2.7 epoch
+        gradient_accumulation_steps: 1
+        train_unet: true
+        train_text_encoder: true  # SDXL nen train ca text encoder (khac voi Flux)
+        learning_rate: 1.0e-4
+        optimizer: "adamw8bit"
+        lr_scheduler: "cosine"
+        lr_warmup_steps: 100
+        ema_config:
+          use_ema: true
+          ema_decay: 0.99
+        dtype: bf16
+
+      # --- Model (SDXL/Illustrious - KHONG dung is_flux) ---
+      model:
+        name_or_path: "E:/repos/ComfyUI/models/checkpoints/miaomiao_mature_edition_eps1.1.safetensors"
+        arch: "sdxl"               # ← BAT BUOC: bao ai-toolkit dung SDXL pipeline (khong phai SD1.5)
+
+      # --- Preview sampling trong luc train ---
+      sample:
+        sampler: "euler_a"        # euler_a cho SDXL (khong phai flowmatch)
+        sample_every: 500
+        width: 1024
+        height: 1024
+        prompts:
+          - "luxueqi, 1girl, solo, white and blue hanfu, xianxia style, close-up portrait, masterpiece"
+          - "luxueqi, 1girl, solo, white and blue hanfu, full body, standing, white background, masterpiece"
+          - "luxueqi, 1girl, solo, white and blue hanfu, holding sword, action pose, masterpiece"
+        neg: "lowres, bad anatomy, bad hands, worst quality, low quality, jpeg artifacts"
+        seed: 42
+        walk_seed: true
+        guidance_scale: 7
+        sample_steps: 20
